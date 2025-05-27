@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student-Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="card">
+        <h1 style="text-align: center ">Student Calculator</h1>
+        <input type="text" id="mat" placeholder="Maths"><br><br>
+        <input type="text" id="phy" placeholder="Physics"><br><br>
+        <input type="text" id="mal" placeholder="Malayalam"><br><br>
+        <input type="text" id="eng" placeholder="English"><br><br>
+        <input type="text" id="hid" placeholder="Hindi"><br><br>
+        <button onclick="publishResult()">View Result</button>
+    </div>
+    <div class="result">
+        <span id="sum"></span><br><br>
+        <span id="percentage"></span><br><br>
+        <span id="grade"></span><br><br>
+    </div>
+
+    <script>
+        function publishResult() {
+            const mat = document.getElementById("mat").value;
+            const phy = document.getElementById("phy").value;
+            const mal = document.getElementById("mal").value;
+            const eng = document.getElementById("eng").value;
+            const hid = document.getElementById("hid").value;
+
+            let total = parseFloat(mat) + parseFloat(phy) + parseFloat(mal) + parseFloat(eng) + parseFloat(hid);
+            document.getElementById("sum").innerHTML = "The Sum is :" + total;
+            let percentage=(total*100)/500;
+            document.getElementById("percentage").innerHTML = "The percentage is:" +percentage;
+
+            if(percentage>=90) {
+                document.getElementById("grade").innerHTML = "your Grade is A+"
+            }
+            else if(percentage>=80) {
+                document.getElementById("grade").innerHTML = "your Grade is A"
+            }
+            else if(percentage>=70) {
+                document.getElementById("grade").innerHTML = "your Grade is B+"
+            }
+            else if(percentage>=60) {
+                document.getElementById("grade").innerHTML = "your Grade is B"
+            }
+            else if(percentage>=50) {
+                document.getElementById("grade").innerHTML = "your Grade is C+"
+            }
+            else if(percentage>=40) {
+                document.getElementById("grade").innerHTML = "your Grade is C"
+            }
+            else if(percentage>=30) {
+                document.getElementById("grade").innerHTML = "your Grade is D+"
+            }
+            else{
+                document.getElementById("grade").innerHTML = "your are failed"
+            }
+        }
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
