@@ -21,7 +21,7 @@ input{
     font-size: 25px;
     height: 45px;
     text-align: center;
-    margin-left: 15rem;
+    margin-left: 16rem;
     outline: none;
     padding:20px;
 }
@@ -30,7 +30,7 @@ button{
     width: 350px;
     font-size: 25px;
     background-color: yellowgreen;
-    margin-left: 15rem;
+    margin-left: 16rem;
     border: 2px solid wheat;
     box-shadow: 4px 4px 4px white;
 }
